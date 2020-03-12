@@ -1,0 +1,19 @@
+type User {
+  id: ID! @id
+  email: String! @unique
+  name: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}
+
+type Game {
+  id: ID! @id
+  title: String!
+  description: String
+  rating: Int!
+  developer: User!
+  published: Boolean!
+  createdAt: DateTime @createdAt
+  updatedAt: DateTime @updatedAt
+}
+
